@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<body>
+ <div class="login">
+	<h1>Prediction of House Rent</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="city" placeholder="Name of the City" required="required" /><br><br>
+        <input type="text" name="type" placeholder="Type of house" required="required" /><br><br>
+		<input type="text" name="bhk" placeholder="No.of rooms" required="required" /><br><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button><br>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
